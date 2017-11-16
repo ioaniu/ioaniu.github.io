@@ -15,5 +15,5 @@ Hi, all!
 &emsp;&emsp;Major in Computer Science   
 
 ** 2004 ~ 2008    B.E.   Xidian University ([XDU](http://en.xidian.edu.cn))**
-&emsp;&emsp;Bachelor of Engineering with major in Observation and Control Techniques and Instruments
+&emsp;&emsp;Major in Observation and Control Techniques and Instruments
 
