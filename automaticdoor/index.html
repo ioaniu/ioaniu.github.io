@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://ioaniu.github.io/automaticdoor/circuit.png">
 <meta property="og:image" content="http://ioaniu.github.io/automaticdoor/flow.png">
 <meta property="og:image" content="http://ioaniu.github.io/automaticdoor/fuzzy.png">
-<meta property="og:updated_time" content="2017-11-15T07:53:49.231Z">
+<meta property="og:updated_time" content="2017-11-16T14:08:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Automatic Door Control System">
 <meta name="twitter:description" content="INTRODUCTION  &amp;emsp;&amp;emsp;A door is a moving mechanism used to block off, and allow access to, an entrance to or within an enclosed space, such as a building, room or vehicle. Then, the automatic doo">
@@ -61,11 +61,11 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">About Me</a></li>
+				<li><a href="/">Home</a></li>
 	        
-				<li><a href="/tuningfilter">TuningFilter</a></li>
+				<li><a href="/tuningfilter">Tuning Filter</a></li>
 	        
-				<li><a href="/automaticdoor">AutomaticDoor</a></li>
+				<li><a href="/automaticdoor">Automatic Door System</a></li>
 	        
 			</ul>
 		</nav>
@@ -73,6 +73,8 @@
     		
     			
             
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">Friends</a>
     			
             
     			
@@ -84,8 +86,6 @@
 					<a class="github" target="_blank" href="https://github.com/ioaniu" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:ioaniu@163.com" title="mail"><i class="icon-mail"></i></a>
-		        
-					<a class="linkedin" target="_blank" href="https://cn.linkedin.com/in/jingfeng-yang-7112a892" title="linkedin"><i class="icon-linkedin"></i></a>
 		        
 			</div>
 		</nav>
@@ -126,8 +126,6 @@
 			        
 						<a class="mail" target="_blank" href="mailto:ioaniu@163.com" title="mail"><i class="icon-mail"></i></a>
 			        
-						<a class="linkedin" target="_blank" href="https://cn.linkedin.com/in/jingfeng-yang-7112a892" title="linkedin"><i class="icon-linkedin"></i></a>
-			        
 				</div>
 			</nav>
 
@@ -135,11 +133,11 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">About Me</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">Home</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tuningfilter">TuningFilter</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tuningfilter">Tuning Filter</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/automaticdoor">AutomaticDoor</a></li>
+					<li style="width: 33.333333333333336%"><a href="/automaticdoor">Automatic Door System</a></li>
 		        
 				</ul>
 			</nav>
@@ -167,7 +165,7 @@
 
         
         <a href="/automaticdoor/index.html" class="archive-article-date">
-  	<time datetime="2017-11-16T03:54:35.234Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
+  	<time datetime="2017-11-16T14:12:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
 </a>
         
       </header>
@@ -175,11 +173,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<h3 id="INTRODUCTION"><a href="#INTRODUCTION" class="headerlink" title="INTRODUCTION"></a>INTRODUCTION</h3><center><img src="./lafaya.png" alt=""></center>
+<h3 id="INTRODUCTION"><a href="#INTRODUCTION" class="headerlink" title="INTRODUCTION"></a>INTRODUCTION</h3><center><img src="/automaticdoor/lafaya.png" alt=""></center>
 
 <p>&emsp;&emsp;A door is a moving mechanism used to block off, and allow access to, an entrance to or within an enclosed space, such as a building, room or vehicle. Then, the automatic door is the progress and perception of the door.<br>&emsp;&emsp;The automatic door control system is similar to the brain of the door, it generally connects with some auxiliary equipment. When receiving and recognizing the action directive, the system may open or close the door and motion the process of opening and closing.</p>
 <hr>
-<h3 id="HARDWARE"><a href="#HARDWARE" class="headerlink" title="HARDWARE"></a>HARDWARE</h3><center><img src="./circuit.png" alt=""><br><font size="2px">Fig.1. Automatic Door Control System Hardware Diagram. </font></center>
+<h3 id="HARDWARE"><a href="#HARDWARE" class="headerlink" title="HARDWARE"></a>HARDWARE</h3><center><img src="/automaticdoor/circuit.png" alt=""><br><font size="2px">Fig.1. Automatic Door Control System Hardware Diagram. </font></center>
 
 <p>&emsp;&emsp;The design principle of the automatic door control system circuit is illustrated in Fig.1. The circuit contains power circuit, MCU circuit, motor driver circuit, sensors circuit, bus circuit and ports circuit. The final design is a <strong>4-layer PCBA</strong> that combines analog signals and digital signals. They are described below:  </p>
 <ul>
@@ -192,10 +190,10 @@
 </ul>
 <hr>
 <h3 id="SOFTWARE"><a href="#SOFTWARE" class="headerlink" title="SOFTWARE"></a>SOFTWARE</h3><p>&emsp;&emsp;Software function of the automatic door control system includes door logical processing, motor control, network interface processing, parameter sensing. Fig.2 shows the software flowchart. Firstly, the software initiates the system to configure the general parameters, then learns or recovers the motor parameters, then executes the main loop of the system (such as communication, sensing, motor running, etc.).</p>
-<center><img src="./flow.png" alt=""><br><font size="2px">Fig.2. Software flowchart of Automatic Door Control System. </font></center>
+<center><img src="/automaticdoor/flow.png" alt=""><br><font size="2px">Fig.2. Software flowchart of Automatic Door Control System. </font></center>
 
 <p>&emsp;&emsp;The key of the system is how to control the motor to adapt the various loads and run smoothly. The method of motor control is based on fuzzy adaptive algorithm，which implements three-loop controller of position, velocity and current feedback(show in Fig.3).</p>
-<center><img src="./fuzzy.png" alt=""><br><font size="2px">Fig.3. Based on Fuzzy Control for Motor Control. </font></center>
+<center><img src="/automaticdoor/fuzzy.png" alt=""><br><font size="2px">Fig.3. Based on Fuzzy Control for Motor Control. </font></center>
 
 <hr>
 <h3 id="CONCLUSION"><a href="#CONCLUSION" class="headerlink" title="CONCLUSION"></a>CONCLUSION</h3><p>&emsp;&emsp;The automatic door control system has the advantages of stabilised performance, high speed, vigoroso flexibility, etc.  The system not only supports  abundant external equipment interfaces and motor interfaces (compatible DC brush motor and DC brushless motor), and implements various control function of the automatic door (such as sliding door, swing door, folding door, revolving door, etc.). The system has already been certified by CE, and has gotten the copyright of China.<br>&emsp;&emsp;The system has powerful function, however,  there are many areas in need of improvement, such as high-cost, complex operation and limited load adaptability. In the further, the system still need to be refined.</p>
@@ -295,6 +293,8 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
       
     
       
+      
+      
     
       
     
@@ -306,6 +306,8 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
       
         
       
+      <li style="width: 100%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">Friends</a></li>
+      
         
       
         
@@ -314,6 +316,30 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
   <div class="tools-wrap">
     
 
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://simonchanper.github.io" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Xiang Chen</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://www.liuqingwei.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Qingwei Liu</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://meijianhan.github.io/JHMei/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Jianhan Mei</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://janhocn.github.io" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Qingyun He</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
     
 
     
