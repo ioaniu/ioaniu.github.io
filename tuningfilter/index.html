@@ -16,7 +16,7 @@
 <meta property="og:description" content="INTRODUCTION&amp;emsp;&amp;emsp;Microwave cavity filters are in great demand in satellite communication industry, mobile communication industry, radar systems and electronic countermeasures systems. Especial">
 <meta property="og:image" content="http://ioaniu.github.io/tuningfilter/filter1.png">
 <meta property="og:image" content="http://ioaniu.github.io/tuningfilter/p1.png">
-<meta property="og:updated_time" content="2017-11-16T14:01:16.000Z">
+<meta property="og:updated_time" content="2017-11-20T14:54:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Intelligent Tuning of Cavity Filter">
 <meta name="twitter:description" content="INTRODUCTION&amp;emsp;&amp;emsp;Microwave cavity filters are in great demand in satellite communication industry, mobile communication industry, radar systems and electronic countermeasures systems. Especial">
@@ -163,7 +163,7 @@
 
         
         <a href="/tuningfilter/index.html" class="archive-article-date">
-  	<time datetime="2017-11-16T15:00:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
+  	<time datetime="2017-11-20T14:54:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-20</time>
 </a>
         
       </header>
@@ -176,7 +176,7 @@
 
 <p>&emsp;&emsp;The complicated and nonlinear relationship between the S-parameters and the screw positions of the cavity filters makes the tuning process difficult and time-consuming. The tuning speed not only depends on the specific type and structure of the filters, but also highlights the importance of human roles in the tuning operation. The tuning time varies with different human experience and strategies from several minutes to several hours. This improvement of the production efficiency severely be restricted by lacking of experienced technicians, who are always expensive to train and employ.<br>&emsp;&emsp;Over time, the automation reformation of the cavity filter tuning tasks seems particularly important and urgent. On the one hand, the manually tuning of filters consumes much time, slowing down the production efficiency of the enterprises. On the other hand, fewer and fewer young people tend to dot these dull and repetitive tasks.<br>&emsp;&emsp;Hence, we proposed a new tuning method based on the mechanism of reward and penalty, which is the key of the <em>reinforcement learning (RL)</em>. A single layer feedforward neural network is built to model the value function for <em>Q-learning</em>.</p>
 <hr>
-<h2 id="PUBLICATIONS"><a href="#PUBLICATIONS" class="headerlink" title="PUBLICATIONS"></a>PUBLICATIONS</h2><p>The project is described in the following paper:<br><a href="https://doi.org/10.1109/ROBIO.2015.7419091" target="_blank" rel="noopener">[1] Reinforcement Learning Approach to Learning Human Experience in Tuning Cavity Filters, IEEE 2015 ROBIO.</a><br><a href="http://www.google.com/patents/CN105680827A?cl=en" target="_blank" rel="noopener">[2] IntelligentTuningAlgorithmofCavityFilterandTuningMethodUsingSame,PatentNo.CN105680827A.</a></p>
+<h2 id="PUBLICATIONS"><a href="#PUBLICATIONS" class="headerlink" title="PUBLICATIONS"></a>PUBLICATIONS</h2><p>The project is described in the following paper:<br>[1] Reinforcement Learning Approach to Learning Human Experience in Tuning Cavity Filters, IEEE 2015 ROBIO.(<a href="https://github.com/ioaniu/Intelligent-Tuning-of-Cavity-Filter" target="_blank" rel="noopener">code</a>, <a href="https://github.com/ioaniu/Tuning-Filter/raw/master/1-BPNNQN-FilterTuning/documents/%5B2015%5DＲeinforcement%20Learning%20Approach%20to%20Learning%20Human%20Experience%20in%20Tuning%20Cavity%20Filters.pdf" target="_blank" rel="noopener">pdf</a>)<br>[2] IntelligentTuningAlgorithmofCavityFilterandTuningMethodUsingSame,<a href="http://www.google.com/patents/CN105680827A?cl=en" target="_blank" rel="noopener">PatentNo.CN105680827A.</a></p>
 <hr>
 <h2 id="INTELLIGENT-TUNING-BASED-ON-Q-LEARNING"><a href="#INTELLIGENT-TUNING-BASED-ON-Q-LEARNING" class="headerlink" title="INTELLIGENT TUNING BASED ON Q-LEARNING"></a>INTELLIGENT TUNING BASED ON Q-LEARNING</h2><p>&emsp;&emsp;<a href="https://en.wikipedia.org/wiki/Reinforcement_learning" target="_blank" rel="noopener"><em>Reinforcement Learning</em></a> is an area of machine leanring inspired by behaviorist psychology, concerned with how <em>software agents</em> ought to take actions in an <em>environment</em> so as to maximize some notion of cumulative <em>reward</em>. Similary, when the worker tuned filter, he adjusted the position of screw according to changing S-parameters untill satisfy the requirement (shown in <strong>Fig. 1</strong>). We learned hence a model which based on reinforcement learning to finish tuning the filter. </p>
 <center><img src="./p1.png" alt=""><br><font size="2px"><strong>Fig.2</strong> The process of filter tuning. </font></center>
@@ -206,7 +206,6 @@
 
 <p>&emsp;&emsp;We trained the <em>Q-network</em> for 100 epochs, each with 1000 maximum tuning steps. As can be seen from the results, at the beginning of the training process the <em>Q-network</em> model seemed hard to achieve the desired state and failed the tuning after 1000 frames (tuning steps). As the training proceeded the step for successfully tuning gradually decreased and converged to about 100 times. After 100 training epochs, we tested the trained Q-network with 100 random states and we found that the probability of successfully tuning reached 95% and in most of the cases the filter could be tuned out within only 50 steps.</p>
 <hr>
-<p><strong><a href="https://github.com/ioaniu/Intelligent-Tuning-of-Cavity-Filter" target="_blank" rel="noopener">The Code</a></strong></p>
 
       
 
