@@ -19,8 +19,8 @@ title: Intelligent Tuning of Cavity Filter
 ## PUBLICATIONS 
 
 The project is described in the following paper:
-[[1] Reinforcement Learning Approach to Learning Human Experience in Tuning Cavity Filters, IEEE 2015 ROBIO.](https://doi.org/10.1109/ROBIO.2015.7419091)
-[[2] IntelligentTuningAlgorithmofCavityFilterandTuningMethodUsingSame,PatentNo.CN105680827A.](http://www.google.com/patents/CN105680827A?cl=en)
+[1] Reinforcement Learning Approach to Learning Human Experience in Tuning Cavity Filters, IEEE 2015 ROBIO.([code](https://github.com/ioaniu/Intelligent-Tuning-of-Cavity-Filter), [pdf](https://github.com/ioaniu/Tuning-Filter/raw/master/1-BPNNQN-FilterTuning/documents/%5B2015%5DＲeinforcement%20Learning%20Approach%20to%20Learning%20Human%20Experience%20in%20Tuning%20Cavity%20Filters.pdf))
+[2] IntelligentTuningAlgorithmofCavityFilterandTuningMethodUsingSame,[PatentNo.CN105680827A.](http://www.google.com/patents/CN105680827A?cl=en)
 
 ---
 
@@ -59,5 +59,3 @@ The project is described in the following paper:
 &emsp;&emsp;We trained the *Q-network* for 100 epochs, each with 1000 maximum tuning steps. As can be seen from the results, at the beginning of the training process the *Q-network* model seemed hard to achieve the desired state and failed the tuning after 1000 frames (tuning steps). As the training proceeded the step for successfully tuning gradually decreased and converged to about 100 times. After 100 training epochs, we tested the trained Q-network with 100 random states and we found that the probability of successfully tuning reached 95% and in most of the cases the filter could be tuned out within only 50 steps.
 
 ---
-
-**[The Code](https://github.com/ioaniu/Intelligent-Tuning-of-Cavity-Filter)**
